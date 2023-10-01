@@ -23,6 +23,8 @@ public class Budget {
 	/** The comment. */
 	private String comment;
 	
+	private AnalyseBudgetaire analyse;
+	
 	/**
 	 * Gets the id.
 	 *
@@ -111,6 +113,14 @@ public class Budget {
 	 */
 	public void setComment(String comment) {
 		this.comment = comment;
+	}
+
+	public AnalyseBudgetaire getAnalyse() {
+		return analyse;
+	}
+
+	public void setAnalyse(AnalyseBudgetaire analyse) {
+		this.analyse = analyse;
 	}
 	
 	

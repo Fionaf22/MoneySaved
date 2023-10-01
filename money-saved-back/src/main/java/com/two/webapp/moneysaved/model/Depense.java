@@ -1,6 +1,7 @@
 package com.two.webapp.moneysaved.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -11,8 +12,8 @@ public class Depense {
 	/** The id. */
 	private Long id;
 	
-	/** The id utilisateur. */
-	private Long idUtilisateur;
+	/** The user. */
+	private Utilisateur utilisateur;
 	
 	/** The title. */
 	private String title;
@@ -30,7 +31,7 @@ public class Depense {
 	private Categorie category;
 	
 	/** The tag. */
-	private Tag tag;
+	private List<Tag> tags;
 	
 	/**
 	 * Gets the id.
@@ -50,22 +51,12 @@ public class Depense {
 		this.id = id;
 	}
 	
-	/**
-	 * Gets the id utilisateur.
-	 *
-	 * @return the id utilisateur
-	 */
-	public Long getIdUtilisateur() {
-		return idUtilisateur;
+	public Utilisateur getUtilisateur() {
+		return utilisateur;
 	}
-	
-	/**
-	 * Sets the id utilisateur.
-	 *
-	 * @param idUtilisateur the new id utilisateur
-	 */
-	public void setIdUtilisateur(Long idUtilisateur) {
-		this.idUtilisateur = idUtilisateur;
+
+	public void setUtilisateur(Utilisateur utilisateur) {
+		this.utilisateur = utilisateur;
 	}
 	
 	/**
@@ -140,22 +131,12 @@ public class Depense {
 		this.category = category;
 	}
 	
-	/**
-	 * Gets the tag.
-	 *
-	 * @return the tag
-	 */
-	public Tag getTag() {
-		return tag;
+	public List<Tag> getTags() {
+		return tags;
 	}
-	
-	/**
-	 * Sets the tag.
-	 *
-	 * @param tag the new tag
-	 */
-	public void setTag(Tag tag) {
-		this.tag = tag;
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;
 	}
 	
 	/**

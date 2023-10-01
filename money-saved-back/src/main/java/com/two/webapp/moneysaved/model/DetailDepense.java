@@ -9,7 +9,7 @@ public class DetailDepense {
 	private Long id;
 	
 	/** The id depense. */
-	private Long idDepense;
+	private Depense depense;
 	
 	/** The article. */
 	private String article;
@@ -38,24 +38,15 @@ public class DetailDepense {
 		this.id = id;
 	}
 	
-	/**
-	 * Gets the id depense.
-	 *
-	 * @return the id depense
-	 */
-	public Long getIdDepense() {
-		return idDepense;
-	}
 	
-	/**
-	 * Sets the id depense.
-	 *
-	 * @param idDepense the new id depense
-	 */
-	public void setIdDepense(Long idDepense) {
-		this.idDepense = idDepense;
+	public Depense getDepense() {
+		return depense;
 	}
-	
+
+	public void setDepense(Depense depense) {
+		this.depense = depense;
+	}
+
 	/**
 	 * Gets the article.
 	 *
