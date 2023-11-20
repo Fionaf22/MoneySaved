@@ -1,5 +1,10 @@
 package com.two.webapp.moneysaved.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import com.two.webapp.moneysaved.entity.BudgetTagEntity;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class Tag.
@@ -14,6 +19,8 @@ public class Tag {
 	
 	/** The description. */
 	private String description;
+	
+	private Set<BudgetTag> budgetTags  = new HashSet<>();
 	
 	/**
 	 * Gets the id.
@@ -67,6 +74,14 @@ public class Tag {
 	 */
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Set<BudgetTag> getBudgetTags() {
+		return budgetTags;
+	}
+
+	public void setBudgetTags(Set<BudgetTag> budgetTags) {
+		this.budgetTags = budgetTags;
 	}
 
 	

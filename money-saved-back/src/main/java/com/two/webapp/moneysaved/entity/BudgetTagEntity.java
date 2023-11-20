@@ -20,7 +20,7 @@ public class BudgetTagEntity {
 	
 	@ManyToOne
 	@JoinColumn(name="BUDGET_ID")
-	private Budget budget;
+	private BudgetEntity budget;
 	
 	/** The tag. */
 	@ManyToOne
@@ -28,7 +28,7 @@ public class BudgetTagEntity {
 	private TagEntity tag;
 	
 	/** The depense max. */
-	@Column(precision = 9, scale = 2,name="DEPENSE_MAX")
+	@Column(precision = 9,name="DEPENSE_MAX")
 	private Float depenseMax;
 	
 	/** The comment. */
@@ -43,11 +43,11 @@ public class BudgetTagEntity {
 		this.id = id;
 	}
 
-	public Budget getBudget() {
+	public BudgetEntity getBudget() {
 		return budget;
 	}
 
-	public void setBudget(Budget budget) {
+	public void setBudget(BudgetEntity budget) {
 		this.budget = budget;
 	}
 

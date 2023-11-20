@@ -1,6 +1,8 @@
 package com.two.webapp.moneysaved.model;
 
 import java.time.YearMonth;
+import java.util.HashSet;
+import java.util.Set;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -24,6 +26,8 @@ public class Budget {
 	private String comment;
 	
 	private AnalyseBudgetaire analyse;
+	private Set<BudgetTag> budgetTags  = new HashSet<>();
+	private Set<BudgetCategorie> budgetCategories  = new HashSet<>();
 	
 	/**
 	 * Gets the id.
@@ -121,6 +125,22 @@ public class Budget {
 
 	public void setAnalyse(AnalyseBudgetaire analyse) {
 		this.analyse = analyse;
+	}
+
+	public Set<BudgetTag> getBudgetTags() {
+		return budgetTags;
+	}
+
+	public void setBudgetTags(Set<BudgetTag> budgetTags) {
+		this.budgetTags = budgetTags;
+	}
+
+	public Set<BudgetCategorie> getBudgetCategories() {
+		return budgetCategories;
+	}
+
+	public void setBudgetCategories(Set<BudgetCategorie> budgetCategories) {
+		this.budgetCategories = budgetCategories;
 	}
 	
 	

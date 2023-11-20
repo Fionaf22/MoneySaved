@@ -3,6 +3,8 @@ package com.two.webapp.moneysaved.model;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.two.webapp.moneysaved.entity.DetailDepenseEntity;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class Depense.
@@ -14,6 +16,8 @@ public class Depense {
 	
 	/** The user. */
 	private Utilisateur utilisateur;
+	
+	private List<DetailDepense> listDetail;
 	
 	/** The title. */
 	private String title;
@@ -155,6 +159,14 @@ public class Depense {
 	 */
 	public void setType(Type type) {
 		this.type = type;
+	}
+
+	public List<DetailDepense> getListDetail() {
+		return listDetail;
+	}
+
+	public void setListDetail(List<DetailDepense> listDetail) {
+		this.listDetail = listDetail;
 	}
 	
 }

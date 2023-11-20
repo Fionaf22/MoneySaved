@@ -21,15 +21,15 @@ public class BudgetCategorieEntity {
 	
 	@ManyToOne
 	@JoinColumn(name="BUDGET_ID")
-	private Budget budget;
+	private BudgetEntity budget;
 	
 	/** The categorie. */
 	@ManyToOne
 	@JoinColumn(name="CATEGORIE_ID")
-	private Categorie categorie;
+	private CategorieEntity categorie;
 	
 	/** The depense max. */
-	@Column(precision = 9, scale = 2,name="DEPENSE_MAX")
+	@Column(precision = 9,name="DEPENSE_MAX")
 	private Float depenseMax;
 	
 	/** The comment. */
@@ -44,19 +44,19 @@ public class BudgetCategorieEntity {
 		this.id = id;
 	}
 
-	public Budget getBudget() {
+	public BudgetEntity getBudget() {
 		return budget;
 	}
 
-	public void setBudget(Budget budget) {
+	public void setBudget(BudgetEntity budget) {
 		this.budget = budget;
 	}
 
-	public Categorie getCategorie() {
+	public CategorieEntity getCategorie() {
 		return categorie;
 	}
 
-	public void setCategorie(Categorie categorie) {
+	public void setCategorie(CategorieEntity categorie) {
 		this.categorie = categorie;
 	}
 

@@ -11,6 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 
 @Entity(name="ANALYSE_BUDGETAIRE")
 public class AnalyseBudgetaireEntity {
@@ -23,8 +24,7 @@ public class AnalyseBudgetaireEntity {
 	
 	/** The id budget. */
 	@OneToOne
-	@Column(name="BUDGET_ID")
-	private Budget budget;
+	private BudgetEntity budget;
 	
 	/** The clos. */
 	@Column(name="IS_CLOS")
@@ -47,11 +47,11 @@ public class AnalyseBudgetaireEntity {
 		this.id = id;
 	}
 
-	public Budget getBudget() {
+	public BudgetEntity getBudget() {
 		return budget;
 	}
 
-	public void setBudget(Budget budget) {
+	public void setBudget(BudgetEntity budget) {
 		this.budget = budget;
 	}
 

@@ -1,5 +1,8 @@
 package com.two.webapp.moneysaved.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Categorie {
 	/** The id. */
 	private Long id;
@@ -9,6 +12,8 @@ public class Categorie {
 	
 	/** The description. */
 	private String description;
+	
+	private Set<BudgetCategorie> budgetCategories  = new HashSet<>();
 	
 	/**
 	 * Gets the id.
@@ -62,6 +67,14 @@ public class Categorie {
 	 */
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Set<BudgetCategorie> getBudgetCategories() {
+		return budgetCategories;
+	}
+
+	public void setBudgetCategories(Set<BudgetCategorie> budgetCategories) {
+		this.budgetCategories = budgetCategories;
 	}
 
 	

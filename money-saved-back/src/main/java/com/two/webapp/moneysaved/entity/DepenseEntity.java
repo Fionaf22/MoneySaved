@@ -40,7 +40,7 @@ public class DepenseEntity {
 	private String title;
 	
 	/** The montant. */
-	@Column(precision = 9, scale = 2,name="MONTANT")
+	@Column(precision = 9,name="MONTANT")
 	private Float montant;
 	
 	/** The date. */

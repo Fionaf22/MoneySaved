@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 
 @Entity(name="UTILISATEUR")
@@ -37,11 +38,11 @@ public class UtilisateurEntity {
 	@Column(unique=true,name="PASSWORD")
 	private String password;
 	
-	@Column
+	
 	@OneToMany(mappedBy="utilisateur",targetEntity=BudgetEntity.class)
 	private List<BudgetEntity> listBudget;
 	
-	@Column
+	
 	@OneToMany(mappedBy="utilisateur",targetEntity=DepenseEntity.class)
 	private List<DepenseEntity> listDepense;
 

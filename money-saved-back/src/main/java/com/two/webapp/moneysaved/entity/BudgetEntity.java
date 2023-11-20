@@ -13,6 +13,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 
 @Entity(name="BUDGET")
 public class BudgetEntity {
@@ -33,14 +34,14 @@ public class BudgetEntity {
 	private YearMonth month;
 	
 	/** The montant. */
-	@Column(precision = 9, scale = 2,name="MONTANT")
+	@Column(precision = 9,name="MONTANT")
 	private Float montant;
 	
 	/** The comment. */
 	@Column(name="COMMENT")
 	private String comment;
 	
-	@Column(name="ANALYSE_ID")
+	
 	@OneToOne(mappedBy="budget")
 	private AnalyseBudgetaireEntity analyse;
 	

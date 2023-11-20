@@ -2,6 +2,8 @@ package com.two.webapp.moneysaved.model;
 
 import java.util.List;
 
+import com.two.webapp.moneysaved.entity.DepenseEntity;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class Utilisateur.
@@ -27,6 +29,7 @@ public class Utilisateur {
 	private String password;
 	
 	private List<Budget> listBudget;
+	private List<Depense> listDepense;
 	
 	/**
 	 * Gets the id.
@@ -142,6 +145,14 @@ public class Utilisateur {
 
 	public void setListBudget(List<Budget> listBudget) {
 		this.listBudget = listBudget;
+	}
+
+	public List<Depense> getListDepense() {
+		return listDepense;
+	}
+
+	public void setListDepense(List<Depense> listDepense) {
+		this.listDepense = listDepense;
 	}
 
 

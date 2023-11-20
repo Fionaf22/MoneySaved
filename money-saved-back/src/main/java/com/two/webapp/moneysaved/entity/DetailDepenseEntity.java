@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity(name="DETAIL_DEPENSE")
@@ -18,7 +19,7 @@ public class DetailDepenseEntity {
 	
 	/** The associated expense. */
 	@ManyToOne
-	@Column(name="DEPENSE_ID")
+	@JoinColumn(name="DEPENSE_ID")
 	private DepenseEntity depense;
 	
 	/** The article. */
@@ -26,7 +27,7 @@ public class DetailDepenseEntity {
 	private String article;
 	
 	/** The montant. */
-	@Column(precision = 9, scale = 2,name="MONTANT")
+	@Column(precision = 9,name="MONTANT")
 	private Float montant;
 	
 	/** The utile. */

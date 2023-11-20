@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profil page</title>
+  </head>
+
+  <body>
+    <form [formGroup]="formProfilGroup" (ngSubmit)="click(formProfilGroup)">
+      <label for="prenom">First Name</label>
+      <input id="prenom" type="text" formControlName="prenom" />
+
+      <label for="nom">Family Name</label>
+      <input id="nom" type="text" formControlName="nom" />
+
+      <label for="email">Email</label>
+      <input id="email" type="text" formControlName="email" />
+
+      <button type="submit">Click here</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <dl>
+      <dt>Prenom</dt>
+      <dd>{{ formProfilGroup.get("prenom")?.value }}</dd>
+
+      <dt>Nom</dt>
+      <dd>{{ formProfilGroup.get("nom")?.value }}</dd>
+
+      <dt>Email</dt>
+      <dd>{{ formProfilGroup.get("email")?.value }}</dd>
+    </dl>
+  </body>
+</html>
