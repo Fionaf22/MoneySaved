@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import com.two.webapp.moneysaved.entity.BudgetEntity;
 import com.two.webapp.moneysaved.model.Budget;
