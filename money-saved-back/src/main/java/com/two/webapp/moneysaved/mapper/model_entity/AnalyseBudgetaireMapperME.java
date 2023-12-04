@@ -1,12 +1,10 @@
 package com.two.webapp.moneysaved.mapper.model_entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import com.two.webapp.moneysaved.entity.AnalyseBudgetaireEntity;
 import com.two.webapp.moneysaved.model.AnalyseBudgetaire;
 
-@Component
 public class AnalyseBudgetaireMapperME {
 
 	@Autowired

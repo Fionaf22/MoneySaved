@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import com.two.webapp.moneysaved.entity.BudgetEntity;
 import com.two.webapp.moneysaved.model.Budget;
 
-@Component
 public class BudgetMapperME {
 	@Autowired
 	private UtilisateurMapperME utilisateurMapper;
