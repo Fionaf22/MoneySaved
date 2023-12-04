@@ -2,9 +2,7 @@ package com.two.webapp.moneysaved.model;
 
 import java.util.List;
 
-import com.two.webapp.moneysaved.entity.DepenseEntity;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Utilisateur.
  */

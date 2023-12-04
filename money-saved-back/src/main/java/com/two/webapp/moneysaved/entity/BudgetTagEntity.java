@@ -1,7 +1,5 @@
 package com.two.webapp.moneysaved.entity;
 
-import com.two.webapp.moneysaved.model.Budget;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

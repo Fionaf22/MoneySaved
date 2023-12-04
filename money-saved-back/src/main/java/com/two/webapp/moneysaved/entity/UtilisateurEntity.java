@@ -8,7 +8,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 
 @Entity(name="UTILISATEUR")
@@ -27,7 +26,7 @@ public class UtilisateurEntity {
 	/** The prenom. */
 	@Column(name="PRENOM")
 	private String prenom;
-	
+		
 	/** The username. */
 	@Column(unique=true, name="USERNAME")
 	private String username;

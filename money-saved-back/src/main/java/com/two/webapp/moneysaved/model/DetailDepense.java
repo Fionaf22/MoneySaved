@@ -1,6 +1,6 @@
 package com.two.webapp.moneysaved.model;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class DetailDepense.
  */

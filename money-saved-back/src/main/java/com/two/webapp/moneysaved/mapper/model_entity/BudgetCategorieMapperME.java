@@ -19,7 +19,7 @@ public class BudgetCategorieMapperME {
 
 	public Set<BudgetCategorie> setEntityToSetModel(Set<BudgetCategorieEntity> setEntity) {
 		Set<BudgetCategorie> setModel = new HashSet<>();
-		if (!setEntity.isEmpty() && setEntity != null) {
+		if (setEntity != null && !setEntity.isEmpty()) {
 			setEntity.forEach(y -> {
 				BudgetCategorie model = new BudgetCategorie();
 				model.setComment(y.getComment());
@@ -49,7 +49,7 @@ public class BudgetCategorieMapperME {
 
 	public Set<BudgetCategorieEntity> setModelToSetEntity(Set<BudgetCategorie> setModel) {
 		Set<BudgetCategorieEntity> setEntity = new HashSet<>();
-		if (!setModel.isEmpty() && setModel != null) {
+		if (setModel != null && !setModel.isEmpty()) {
 			setModel.forEach(model -> {
 				BudgetCategorieEntity entity = new BudgetCategorieEntity();
 				entity.setComment(model.getComment());

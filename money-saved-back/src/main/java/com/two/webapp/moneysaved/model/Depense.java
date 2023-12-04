@@ -3,9 +3,6 @@ package com.two.webapp.moneysaved.model;
 import java.time.LocalDate;
 import java.util.List;
 
-import com.two.webapp.moneysaved.entity.DetailDepenseEntity;
-
-// TODO: Auto-generated Javadoc
 /**
  * The Class Depense.
  */

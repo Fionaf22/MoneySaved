@@ -3,9 +3,6 @@ package com.two.webapp.moneysaved.model;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.two.webapp.moneysaved.entity.BudgetTagEntity;
-
-// TODO: Auto-generated Javadoc
 /**
  * The Class Tag.
  */

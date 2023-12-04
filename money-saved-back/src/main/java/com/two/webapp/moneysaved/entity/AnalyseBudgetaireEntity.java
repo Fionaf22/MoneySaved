@@ -1,6 +1,5 @@
 package com.two.webapp.moneysaved.entity;
 
-import com.two.webapp.moneysaved.model.Budget;
 import com.two.webapp.moneysaved.model.Ecart;
 
 import jakarta.persistence.Column;
@@ -11,7 +10,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
-import jakarta.persistence.PrimaryKeyJoinColumn;
 
 @Entity(name="ANALYSE_BUDGETAIRE")
 public class AnalyseBudgetaireEntity {
