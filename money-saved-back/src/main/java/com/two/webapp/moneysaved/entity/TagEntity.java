@@ -53,5 +53,13 @@ public class TagEntity {
 		this.description = description;
 	}
 
+	public Set<BudgetTagEntity> getBudgetTags() {
+		return budgetTags;
+	}
+
+	public void setBudgetTags(Set<BudgetTagEntity> budgetTags) {
+		this.budgetTags = budgetTags;
+	}
+
 
 }

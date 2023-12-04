@@ -52,6 +52,14 @@ public class CategorieEntity {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	public Set<BudgetCategorieEntity> getBudgetCategories() {
+		return budgetCategories;
+	}
+
+	public void setBudgetCategories(Set<BudgetCategorieEntity> budgetCategories) {
+		this.budgetCategories = budgetCategories;
+	}
 	
 	
 

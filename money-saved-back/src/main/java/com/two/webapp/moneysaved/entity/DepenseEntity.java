@@ -1,6 +1,7 @@
 package com.two.webapp.moneysaved.entity;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.two.webapp.moneysaved.model.Type;
@@ -33,7 +34,7 @@ public class DepenseEntity {
 	
 	@OneToMany(mappedBy="depense")
 	@Column(name="DETAIL_ID")
-	private List<DetailDepenseEntity> listDetail;
+	private List<DetailDepenseEntity> listDetail = new ArrayList<>();
 	
 	/** The title. */
 	@Column(name="TITLE")

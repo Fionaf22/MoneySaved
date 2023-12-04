@@ -1,5 +1,6 @@
 package com.two.webapp.moneysaved.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -40,11 +41,11 @@ public class UtilisateurEntity {
 	
 	
 	@OneToMany(mappedBy="utilisateur",targetEntity=BudgetEntity.class)
-	private List<BudgetEntity> listBudget;
+	private List<BudgetEntity> listBudget = new ArrayList<>();
 	
 	
 	@OneToMany(mappedBy="utilisateur",targetEntity=DepenseEntity.class)
-	private List<DepenseEntity> listDepense;
+	private List<DepenseEntity> listDepense = new ArrayList<>();
 
 	public Long getId() {
 		return id;

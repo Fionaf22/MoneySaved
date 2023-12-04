@@ -91,5 +91,29 @@ public class BudgetEntity {
 		this.comment = comment;
 	}
 
+	public AnalyseBudgetaireEntity getAnalyse() {
+		return analyse;
+	}
+
+	public void setAnalyse(AnalyseBudgetaireEntity analyse) {
+		this.analyse = analyse;
+	}
+
+	public Set<BudgetCategorieEntity> getBudgetCategories() {
+		return budgetCategories;
+	}
+
+	public void setBudgetCategories(Set<BudgetCategorieEntity> budgetCategories) {
+		this.budgetCategories = budgetCategories;
+	}
+
+	public Set<BudgetTagEntity> getBudgetTags() {
+		return budgetTags;
+	}
+
+	public void setBudgetTags(Set<BudgetTagEntity> budgetTags) {
+		this.budgetTags = budgetTags;
+	}
+
 	
 }
