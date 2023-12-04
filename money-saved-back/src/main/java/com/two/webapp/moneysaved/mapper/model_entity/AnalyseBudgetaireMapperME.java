@@ -20,7 +20,6 @@ public class AnalyseBudgetaireMapperME {
 			model.setClos(entity.getClos());
 			model.setComment(entity.getComment());
 			model.setBudget(budgetMapper.entityToModel(entity.getBudget()));
-
 			return model;
 		}
 		return null;
@@ -34,10 +33,8 @@ public class AnalyseBudgetaireMapperME {
 			entity.setClos(model.getClos());
 			entity.setComment(model.getComment());
 			entity.setBudget(budgetMapper.modelToEntity(model.getBudget()));
-
 			return entity;
 		}
 		return null;
 	}
-
 }

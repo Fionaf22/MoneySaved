@@ -52,6 +52,7 @@ public class DepenseMapperME {
 			entity.setTitle(model.getTitle());
 			entity.setType(model.getType());
 			entity.setUtilisateur(utilisateurMapper.modelToEntity(model.getUtilisateur()));
+			return entity;
 		}
 		return null;
 	}

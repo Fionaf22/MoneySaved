@@ -37,7 +37,7 @@ public class BudgetMapperME {
 					.map(a -> budgetCategorieMapper.entityToModel(a)).collect(Collectors.toCollection(HashSet::new)));
 			model.setBudgetTags(entity.getBudgetTags().stream().map(budgetTagMapper::entityToModel)
 					.collect(Collectors.toCollection(HashSet::new)));
-
+			return model;
 		}
 		return null;
 	}
@@ -55,6 +55,7 @@ public class BudgetMapperME {
 					.map(a -> budgetCategorieMapper.modelToEntity(a)).collect(Collectors.toCollection(HashSet::new)));
 			entity.setBudgetTags(model.getBudgetTags().stream().map(budgetTagMapper::modelToEntity)
 					.collect(Collectors.toCollection(HashSet::new)));
+			return entity;
 		}
 		return null;
 	}
