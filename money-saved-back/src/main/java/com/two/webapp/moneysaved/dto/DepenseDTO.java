@@ -30,6 +30,8 @@ public class DepenseDTO {
 	
 	/** The tag. */
 	private List<TagDTO> tags;
+	
+	private String storeName;
 
 	/**
 	 * @return the id
@@ -155,6 +157,14 @@ public class DepenseDTO {
 	 */
 	public void setTags(List<TagDTO> tags) {
 		this.tags = tags;
+	}
+
+	public String getStoreName() {
+		return storeName;
+	}
+
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
 	}
 	
 }

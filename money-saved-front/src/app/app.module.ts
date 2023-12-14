@@ -12,6 +12,11 @@ import { FooterComponent } from './footer/footer.component';
 import { AnalyseBudgetComponent } from './analyse-budget/analyse-budget.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { ToastModule } from 'primeng/toast';
+import { TimelineModule } from 'primeng/timeline';
+import { MenubarModule } from 'primeng/menubar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +27,17 @@ import {MatIconModule} from '@angular/material/icon';
     AnalyseBudgetComponent
   ],
   imports: [
+    TimelineModule,
+    ProgressBarModule,
+    ToastModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     CardModule,
     MegaMenuModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

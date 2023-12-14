@@ -68,6 +68,9 @@ public class DepenseEntity {
 	            @JoinColumn(name="TAG_ID", referencedColumnName="ID")
 	    )
 	private List<TagEntity> tags;
+	
+	@Column(name="STORE_NAME")
+	private String storeName;
 
 	public Long getId() {
 		return id;
@@ -139,6 +142,20 @@ public class DepenseEntity {
 
 	public void setTags(List<TagEntity> tags) {
 		this.tags = tags;
+	}
+
+	/**
+	 * @return the storeName
+	 */
+	public String getStoreName() {
+		return storeName;
+	}
+
+	/**
+	 * @param storeName the storeName to set
+	 */
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
 	}
 
 	

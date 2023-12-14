@@ -33,6 +33,7 @@ public class DepenseMapperME {
 			model.setTags(entity.getTags().stream().map(a -> tagMapper.entityToModel(a))
 					.collect(Collectors.toCollection(ArrayList::new)));
 			model.setType(entity.getType());
+			model.setStoreName(entity.getStoreName());
 			return model;
 		}
 		return null;
@@ -48,10 +49,11 @@ public class DepenseMapperME {
 			entity.setListDetail(model.getListDetail().stream().map(detailDepenseMapper::modelToEntity)
 					.collect(Collectors.toCollection(ArrayList::new)));
 			entity.setMontant(model.getMontant());
-			entity.setTags(null);
+			entity.setTags(model.getTags().stream().map(a-> tagMapper.modelToEntity(a)).collect(Collectors.toCollection(ArrayList:: new)));
 			entity.setTitle(model.getTitle());
 			entity.setType(model.getType());
 			entity.setUtilisateur(utilisateurMapper.modelToEntity(model.getUtilisateur()));
+			entity.setStoreName(model.getStoreName());
 			return entity;
 		}
 		return null;

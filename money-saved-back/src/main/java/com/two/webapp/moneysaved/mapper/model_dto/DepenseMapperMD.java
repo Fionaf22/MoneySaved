@@ -35,6 +35,7 @@ public class DepenseMapperMD {
 			model.setTags(dto.getTags().stream().map(a -> tagMapper.dtoToModel(a))
 					.collect(Collectors.toCollection(ArrayList::new)));
 			model.setType(typeMapper.dtoToModel(dto.getType()));
+			model.setStoreName(dto.getStoreName());
 			return model;
 		}
 		return null;
@@ -50,10 +51,11 @@ public class DepenseMapperMD {
 			dto.setListDetail(model.getListDetail().stream().map(detailDepenseMapper::modelToDTO)
 					.collect(Collectors.toCollection(ArrayList::new)));
 			dto.setMontant(model.getMontant());
-			dto.setTags(null);
+			dto.setTags(model.getTags().stream().map(tagMapper :: modelToDTO).collect(Collectors.toCollection(ArrayList::new)));
 			dto.setTitle(model.getTitle());
 			dto.setType(typeMapper.modelToDto(model.getType()));
 			dto.setUtilisateur(utilisateurMapper.modelToDTO(model.getUtilisateur()));
+			dto.setStoreName(model.getStoreName());
 			return dto;
 		}
 		return null;

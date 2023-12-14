@@ -1,1 +1,50 @@
-<p>mainpage works!</p>
+<span class="grid m-1 shadow-1">
+  <p
+    class="text-4xl col-offset-1 col-11 text-bluegray-500 font-normal capitalize"
+  >
+    Dashboard
+  </p>
+  <span class="col-6">
+    <p-card header="Budget du mois">
+      <p class="m-0">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+        consequuntur error repudiandae numquam deserunt quisquam repellat libero
+        asperiores earum nam nobis, culpa ratione quam perferendis esse,
+        cupiditate neque quas!
+      </p>
+    </p-card>
+  </span>
+  <span class="col-6">
+    <p-card header="Dépense du mois">
+      <p class="m-0">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+        consequuntur error repudiandae numquam deserunt quisquam repellat libero
+        asperiores earum nam nobis, culpa ratione quam perferendis esse,
+        cupiditate neque quas!
+      </p>
+    </p-card>
+  </span>
+  <span class="col-12">
+    <p-card header="Objectif du mois">
+      <p class="m-0">
+        <p-progressBar [value]="50"></p-progressBar>
+      </p>
+    </p-card>
+  </span>
+</span>
+
+<span class="grid m-1 p-2 shadow-1">
+  <p
+    class="text-4xl col-offset-1 col-11 text-bluegray-500 font-normal capitalize"
+  >
+    Timeline - Dernières Dépenses
+  </p>
+  <p-timeline [value]="events">
+    <ng-template pTemplate="content" let-event>
+        <small class="p-text-secondary">{{ event.date }}</small>
+    </ng-template>
+    <ng-template pTemplate="opposite" let-event>
+      {{ event.store }} | {{ event.title }}
+    </ng-template>
+  </p-timeline>
+</span>

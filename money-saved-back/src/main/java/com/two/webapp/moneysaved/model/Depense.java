@@ -34,6 +34,8 @@ public class Depense {
 	/** The tag. */
 	private List<Tag> tags;
 	
+	private String storeName;
+	
 	/**
 	 * Gets the id.
 	 *
@@ -164,6 +166,14 @@ public class Depense {
 
 	public void setListDetail(List<DetailDepense> listDetail) {
 		this.listDetail = listDetail;
+	}
+
+	public String getStoreName() {
+		return storeName;
+	}
+
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
 	}
 	
 }

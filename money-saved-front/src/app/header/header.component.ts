@@ -4,42 +4,39 @@ import { MegaMenuItem, MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  items: MegaMenuItem[]=[];
-  subitems : MenuItem[][]=[]
-  i: MenuItem[]=[];
+  items: MenuItem[] = [];
+  subitems: MenuItem[][] = [];
+  i: MenuItem[] = [];
 
   ngOnInit(): void {
-    this.i=[
-      {label:'title submenu',
-    items : [{
-      label :'submenu',
-      icon :'pi pi-user'
-    },
-  {
-    label : 'submenu 2',
-    badge : 'monitoring',
-    badgeStyleClass:'material-symbols-outlined'
-  }]},
-      {label : '2'}]
-
-    this.subitems =[
-this.i,this.i
-];
-
-
-      this.items=[
-        {
-          label :   "Analyse Budgetaire",
-          icon : 'home',
-          routerLink: ['/stats'],
-          items : this.subitems,
-        },
-        {label : 'budget'},
-
-      ]
+    this.items = [
+      {
+        label: 'Analyse Budgetaire',
+        icon: 'pi pi-chart-pie',
+        routerLink: ['/stats'],
+      },
+      {
+        label: 'budget',
+        icon: 'pi pi-sliders-h',
+        items: [{ label: 'En cours', icon: 'pi pi-euro' }, { label: 'Historique', icon : 'pi pi-history' }],
+      },
+      {
+        label: 'Depenses',
+        icon: 'pi pi-money-bill',
+        items: [
+          {
+            label: 'Ajouter',
+            icon: 'pi pi-plus',
+          },
+          {
+            label : 'Liste',
+            icon :'pi pi-list'
+          }
+        ],
+      },
+    ];
   }
-
 }
